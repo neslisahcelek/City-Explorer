@@ -1,37 +1,68 @@
 package com.example.explorethecity.model
 
 import com.squareup.moshi.Json
-
-data class photo(
-    val id: String,
-    @Json(name = "img_src")
-    val img_src: String,
-)
 data class Event(
-    val name: Name,
-    val capital: Any,
-  //  val language: Any
-    /*
+    val title: String,
+    val date: Date,
+    val address: List<String>?,
+    val link: String?,
+    val event_location_map: EventLocationMap?,
+    val description: String?,
+    val ticket_info: List<TicketInfo>?,
+    val venue: Venue?,
+    val thumbnail: String?,
+    val image: String?
+)
+
+data class EventsResponse(
+    val search_metadata: SearchMetadata,
+    val search_parameters: SearchParameters,
+    val search_information: SearchInformation,
+    val events_results: List<Event>
+)
+data class SearchMetadata(
     val id: String,
-    val url: String,
-    val locale: String,
-    val images: List<Image>,
-    val dates: Date
-     */
+    val status: String,
+    val json_endpoint: String,
+    val created_at: String,
+    val processed_at: String,
+    val google_events_url: String,
+    val raw_html_file: String,
+    val total_time_taken: Double
 )
-data class Name(
-    val common:Any,
-    val official:Any,
-    val nativeName:Any
+
+data class SearchParameters(
+    val q: String,
+    val engine: String
 )
+
+data class SearchInformation(
+    val events_results_state: String
+)
+
 data class Date(
-    val start: Start
-
+    val start_date: String,
+    @Json(name="when")
+    val whenDate: String
 )
 
-data class Start (
-    val localDate: String,
-    val localTime: String
+data class EventLocationMap(
+    val image: String,
+    val link: String,
+    val serpapi_link: String
+)
+
+data class TicketInfo(
+    val source: String,
+    val link: String,
+    val link_type: String
+)
+
+data class Venue(
+    val name: String,
+    val rating: Double,
+    val reviews: Int,
+    val link: String
 )
 
 data class Image (

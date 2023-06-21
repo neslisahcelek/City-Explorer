@@ -3,13 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_placelist">
-
-    <fragment
-        android:id="@+id/navigation_placelist"
-        android:name="com.example.explorethecity.ui.placelist.PlaceListFragment"
-        android:label="@string/title_place_list"
-        tools:layout="@layout/fragment_place_list" />
+    app:startDestination="@+id/navigation_event_list">
 
     <fragment
         android:id="@+id/navigation_event_list"

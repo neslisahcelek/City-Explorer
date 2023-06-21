@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/navigation_placelist"
-        android:icon="@drawable/baseline_place_24"
-        android:title="@string/title_place_list" />
 
     <item
         android:id="@+id/navigation_event_list"
