@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
     <FrameLayout
+        android:id="@+id/fragment_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.ProfileFragment">
@@ -64,6 +65,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="280dp"
@@ -125,43 +127,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_weight="1"
-                        android:text="City:"
-                        android:textColor="@color/text"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/cityTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_weight="1"
-                        android:text="Antalya"
-                        android:textAlignment="viewEnd"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="20dp"
-                    android:background="#D9D9D9" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -183,6 +148,53 @@
                         android:text="******"
                         android:textAlignment="viewEnd"
                         android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="20dp"
+                    android:background="#D9D9D9" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="3"
+                        android:text="City:"
+                        android:textColor="@color/text"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="3"
+                        android:text="Antalya"
+                        android:textAlignment="viewEnd"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/changeCityButton"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        app:icon="@drawable/baseline_settings_24"
+                        app:iconPadding="0dp" />
+
 
                 </LinearLayout>
 

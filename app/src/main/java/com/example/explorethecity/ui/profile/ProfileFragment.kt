@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.explorethecity.MainActivity
+import com.example.explorethecity.R
 import com.example.explorethecity.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -60,6 +61,12 @@ class ProfileFragment : Fragment() {
         binding.profileImage.setOnClickListener(){
             Log.d("image","click")
             setProfilePicture()
+        }
+
+        binding.changeCityButton.setOnClickListener(){
+            val changeCityFragment = ChangeCityFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(binding.fragmentProfile.id,changeCityFragment).addToBackStack(null).commit()
         }
 
 
