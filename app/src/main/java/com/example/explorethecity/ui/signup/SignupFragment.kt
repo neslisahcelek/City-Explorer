@@ -46,6 +46,7 @@ class SignupFragment : Fragment() {
             val password = binding.passwordInputSignup.text.toString()
             val city = binding.cityInputSignup.text.toString()
 
+
             if (name.isNotEmpty() && surname.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
                 signup(name, surname, email, password, city)
             }
@@ -74,9 +75,8 @@ class SignupFragment : Fragment() {
                     editor.putString("email", email)
                     editor.putString("password", password)
                     editor.putString("city", city)
+                    editor.putString("id", firebaseUser.uid)
                     editor.apply()
-
-                    //UserSingleton.currentUser = user
 
                 } else {
                     Log.w(ContentValues.TAG, "createUserWithEmail:failure", task.exception)
