@@ -10,18 +10,18 @@ An android application that aims to empower people to explore their city effortl
 - Users can see their profile.
 
 ## Technologies Used
-Firebase Authentication
-Firebase Firestore
-Retrofit
-MVVM Architecture
-Material Design Components
-Navigation Component
-Shared Preferences
-ViewModel
-LiveData
-Moshi
-Coil
-Compose
+- Firebase Authentication
+- Firebase Firestore
+- Retrofit
+- MVVM Architecture
+- Material Design Components
+- Navigation Component
+- Shared Preferences
+- ViewModel
+- LiveData
+- Moshi
+- Coil
+- Compose
 
 
 ### Prototype
