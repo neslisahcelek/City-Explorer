@@ -39,7 +39,7 @@ class ChangeCityFragment : Fragment() {
             val profileFragment = ProfileFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(binding.fragmentChangeCity.id,profileFragment).addToBackStack(null).commit()
-
+            requireView().visibility = View.GONE
         }
         return root
     }
