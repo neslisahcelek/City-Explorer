@@ -40,9 +40,6 @@ class LoginFragment : Fragment() {
             SignUpButtonClicked()
         }
 
-        binding.loginWithGoogleButton.setOnClickListener{
-            LoginWithGoogleButtonClicked()
-        }
         val root: View = binding.root
 
         return root
@@ -66,10 +63,7 @@ class LoginFragment : Fragment() {
             Log.d("login", "please fill al fields")
         }
     }
-    fun LoginWithGoogleButtonClicked() {
-        val intent = Intent(activity, MainActivity::class.java)
-        startActivity(intent)
-    }
+
     fun SignUpButtonClicked() {
         val fragmentTransaction =
             requireActivity().supportFragmentManager.beginTransaction()

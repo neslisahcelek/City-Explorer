@@ -30,14 +30,15 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/imageView"
+                            android:id="@+id/profileImage"
                             android:layout_width="140dp"
                             android:layout_height="140dp"
                             android:layout_marginTop="50dp"
+                            android:clickable="true"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@android:drawable/btn_star_big_on" />
+                            app:srcCompat="@drawable/phoebe_buffay" />
 
                         <TextView
                             android:id="@+id/nameTextView"
@@ -45,12 +46,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:hint="Name Surname"
+                            android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="24sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView"
-                            app:layout_constraintStart_toStartOf="@+id/imageView"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                            app:layout_constraintEnd_toEndOf="@+id/profileImage"
+                            app:layout_constraintStart_toStartOf="@+id/profileImage"
+                            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

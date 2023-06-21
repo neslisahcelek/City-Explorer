@@ -65,19 +65,7 @@ data class Venue(
     val link: String
 )
 
-data class Image (
-    val ratio: String,
-    val url: String
-)
 
-data class Place(
-    val id: Int,
-    val name: String,
-    val description: String,
-    val image: String,
-    val location: String,
-    val category: String
-)
 data class User(
     val id: String,
     val name: String,

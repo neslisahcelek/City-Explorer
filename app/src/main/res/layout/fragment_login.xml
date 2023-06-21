@@ -69,21 +69,10 @@
         android:layout_height="60dp"
         android:textSize="18sp"
         android:text="Log In"
-        app:layout_constraintBottom_toTopOf="@id/loginWithGoogleButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
-    <Button
-        android:id="@+id/loginWithGoogleButton"
-        android:onClick="loginWithGoogle"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:textSize="18sp"
-        android:text="Log In With Google Account"
         app:layout_constraintBottom_toTopOf="@id/linearLayoutDontHaveAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 
     <LinearLayout
         android:id="@+id/linearLayoutDontHaveAccount"

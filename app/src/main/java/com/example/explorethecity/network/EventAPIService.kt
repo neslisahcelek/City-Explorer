@@ -31,8 +31,6 @@ interface EventAPIService{
     @GET("search?engine=google_events")
     suspend fun getEventsByCity(
         @Query("q") query: String,
-        @Query("hl") language: String = "en",
-        @Query("gl") country: String = "us",
         @Query("api_key") apiKey: String
     ): EventsResponse
 

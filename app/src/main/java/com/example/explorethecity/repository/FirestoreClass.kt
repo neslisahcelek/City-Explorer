@@ -2,7 +2,6 @@ package com.example.explorethecity.repository
 
 import android.util.Log
 import com.example.explorethecity.model.User
-import com.example.explorethecity.ui.login.LoginFragment
 import com.example.explorethecity.ui.signup.SignupFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

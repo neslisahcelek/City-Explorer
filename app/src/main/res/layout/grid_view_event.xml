@@ -20,7 +20,7 @@
             android:id="@+id/eventCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_margin="3dp"
             android:clickable="true"
             app:cardBackgroundColor="@color/card_background"
             app:cardCornerRadius="12dp"
@@ -33,13 +33,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="2dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="3dp"
-                    app:imageUrl="@{event.image}">
-
-                </ImageView>
 
                 <TextView
                     android:id="@+id/eventNameTextView"
@@ -51,6 +44,17 @@
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:padding="3dp"
+                    app:imageUrl="@{event.image}">
+
+                </ImageView>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Date: "
-                        android:textColor="#555555"
+                        android:textColor="@color/black"
                         android:textSize="18sp" />
 
                     <TextView
