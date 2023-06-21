@@ -4,44 +4,42 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.explorethecity.R
+import com.example.explorethecity.databinding.GridViewEventBinding
 import com.example.explorethecity.model.Event
 
-class EventAdapter (var events:ArrayList<Event>): RecyclerView.Adapter<EventViewHolder>() {
+class EventAdapter : ListAdapter<Event,
+        EventViewHolder>(DiffCallback) {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): EventViewHolder {
-        val layoutView:View = LayoutInflater.from(parent.context).
-        inflate(R.layout.card_event, parent, false)
-
-        return EventViewHolder(layoutView)
+        return EventViewHolder(
+            GridViewEventBinding.inflate(
+            LayoutInflater.from(parent.context)))
     }
 
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
-        var currentEvent = events[position]
-        holder.eventTitle.text = currentEvent.name
-        /*
-        holder.imageView
-
-        holder.cardView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(p0: View?) {
-                val page: Uri = Uri.parse(currentEvent.url)
-                val browserIntent: Intent = Intent(Intent.ACTION_VIEW, page)
-                startActivity(holder.itemView.context, browserIntent, Bundle())
-            }
-        })
-
-         */
+        val currentEvent = getItem(position)
+        holder.bind(currentEvent)
     }
+    companion object DiffCallback : DiffUtil.ItemCallback<Event>() {
+        override fun areItemsTheSame(oldItem: Event, newItem: Event): Boolean {
+            return oldItem.name.toString() == newItem.name.toString()
+        }
 
-    override fun getItemCount(): Int {
-        return events.size
+        override fun areContentsTheSame(oldItem: Event, newItem: Event): Boolean {
+            return false
+        }
     }
 }
 
-class EventViewHolder(view: View): RecyclerView.ViewHolder(view){
-    var eventTitle: TextView = view.findViewById(R.id.eventTextView)
-    var cardView: View = view.findViewById(R.id.eventCardView)
+class EventViewHolder(private var binding: GridViewEventBinding): RecyclerView.ViewHolder(binding.root){
+    fun bind(event:Event) {
+        binding.event=event
+        binding.executePendingBindings()
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.explorethecity
 
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
@@ -19,6 +20,7 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
         }
     }
 }
+
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView,
                      data: LiveData<List<Event>>?) {

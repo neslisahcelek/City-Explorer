@@ -14,11 +14,6 @@ import kotlinx.coroutines.launch
 class EventListViewModel : ViewModel() {
     private val eventApi = eventAPI.retrofitService
 
-    private val _status = MutableLiveData<String>()
-    val status: LiveData<String>
-        get() = _status
-
-
     private val _events = MutableLiveData<List<Event>>()
     val events: LiveData<List<Event>>
         get() = _events
@@ -31,6 +26,7 @@ class EventListViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val response = eventApi.getEvents()
+                _events.value=response
                 Log.d("api", response.toString())
 
             } catch (e: Exception) {

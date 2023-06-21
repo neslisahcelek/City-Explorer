@@ -24,7 +24,7 @@ object eventAPI {
 }
 
 interface EventAPIService{
-    @GET("lang/spanish?fields=name,capital")
+    @GET("region/europe?fields=name,capital")
     suspend fun getEvents(): List<Event>
 
 }
